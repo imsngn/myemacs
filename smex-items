@@ -1,0 +1,24 @@
+
+;; ----- smex-history -----
+(
+ org-mode-restart
+ info
+ find-function-on-key
+ find-variable
+ find-function
+ nodejs-repl
+ customize-group
+)
+
+;; ----- smex-data -----
+(
+ (cd . 1)
+ (customize-group . 3)
+ (js2-mode . 1)
+ (nodejs-repl . 2)
+ (find-function . 2)
+ (find-variable . 4)
+ (find-function-on-key . 1)
+ (info . 1)
+ (org-mode-restart . 1)
+)
