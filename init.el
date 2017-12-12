@@ -7,7 +7,7 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa-cn" . "https://elpa.emacs-china.org/melpa/") t)
+  (add-to-list 'package-archives '("melpa-cn" . "http://elpa.emacs-china.org/melpa/") t)
   )
 (require 'cl)
 
@@ -23,6 +23,7 @@
                            js2-mode
                            nodejs-repl
                            exec-path-from-shell
+                           popwin
                            ) "Default packages")
 (setq package-selected-packages eyoumxu/packages)
 
@@ -62,12 +63,21 @@
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 
-
+(require 'popwin)
+(popwin-mode t)
 ;; let emacs coudl found the execuable
 
 (tool-bar-mode -1)
 ;;- turn off scroll-bar
 (scroll-bar-mode -1)
+
+(abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+                                            ("8xym" "xuyouming")
+                                            ("8ms" "Microsoft")
+                                            ))
+(require 'org)                          
+(setq org-src-fontify-natively t)
 ;;- turn off splash screen
 (setq inhibit-splash-screen t)
 
@@ -75,6 +85,7 @@
 
 
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 ;;(require 'org)                          
 ;;(setq org-src-fontify-natively t)
@@ -205,5 +216,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(js2-external-variable ((t (:foreground "gray")))))
-(require 'org)                          
-(setq org-src-fontify-natively t)
