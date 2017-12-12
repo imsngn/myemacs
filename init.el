@@ -13,6 +13,7 @@
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+
 ;- save your configure
 ;- define a function to quickly open your config file
 
@@ -23,26 +24,11 @@
 (require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-keybindings)
-(require 'org)
+(require 'init-org)
 
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
-
-
-
-
-
-
-
-;;(require 'org)                          
-;;(setq org-src-fontify-natively t)
-
-
-
-
-
-
 
 
 

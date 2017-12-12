@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ counsel-git
+ counsel-git-grep
  org-mode-restart
  info
  find-function-on-key
  find-variable
  find-function
- nodejs-repl
- customize-group
 )
 
 ;; ----- smex-data -----
@@ -21,4 +21,6 @@
  (find-function-on-key . 1)
  (info . 1)
  (org-mode-restart . 1)
+ (counsel-git . 2)
+ (counsel-git-grep . 1)
 )
