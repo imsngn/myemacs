@@ -4,57 +4,17 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa-cn" . "http://elpa.emacs-china.org/melpa/") t)
-  )
-(require 'cl)
-
-;;add whatever packages you want here
-
-(defvar eyoumxu/packages '(
-                           company
-                           monokai-theme
-                           hungry-delete
-                           swiper
-                           counsel
-                           smartparens
-                           js2-mode
-                           nodejs-repl
-                           exec-path-from-shell
-                           popwin
-                           ) "Default packages")
-(setq package-selected-packages eyoumxu/packages)
-
-(defun eyoumxu/packages-installed-p ()
-  (loop for pkg in eyoumxu/packages
-        when (not (package-installed-p pkg)) do (return nil)
-        finally (return t)))
 
 
-(unless (eyoumxu/packages-installed-p)
-  (message "%s" "Refreshing package databases...")
-  (package-refresh-contents)
-  (dolist (pkg eyoumxu/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
 
-(require 'hungry-delete)
-(global-hungry-delete-mode t)
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(require 'init-packages )
 
-(require 'smartparens-config)
-;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-(smartparens-global-mode t)
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
-
-
-
-
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
@@ -63,9 +23,7 @@
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 
-(require 'popwin)
-(popwin-mode t)
-;; let emacs coudl found the execuable
+
 
 (tool-bar-mode -1)
 ;;- turn off scroll-bar
@@ -97,7 +55,6 @@
 
 (global-hl-line-mode t)
 (delete-selection-mode t)
-(load-theme 'monokai t)
 
 (global-set-key (kbd  "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-v") 'find-variable)
@@ -195,7 +152,6 @@
   (find-file "~/.emacs.d/init.el"))
 
 (global-set-key (kbd "<f2>") 'open-my-init-file)
-(global-company-mode t)
 
 
 
