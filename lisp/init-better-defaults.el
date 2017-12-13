@@ -127,15 +127,21 @@
    ("\\.idl$" . idl-mode)
    ("\\.js\\'" . js2-mode)
    ))
+
+
+(defun indent-buffer ()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun indent-region-or-buffer()
+  (interactive)
+  (save-excursion
+    ;;; xxx-p, any term named after by _p, means this is a predict
+    (if (region-active-p)
+        (progn
+          (indent-region (region-beginning)(region-end))
+          (message "Indented selected region"))
+    (progn
+      (indent-buffer)
+      (message "Indented buffer.")))))
 (provide 'init-better-defaults)
-
-;;;### (autoloads nil "init-better-defaults" "init-better-defaults.el"
-;;;;;;  (23088 50558 0 0))
-;;; Generated autoloads from init-better-defaults.el
-
-(autoload 'test-autoload-via-magic "init-better-defaults" "\
-
-
-\(fn)" t nil)
-
-;;;***

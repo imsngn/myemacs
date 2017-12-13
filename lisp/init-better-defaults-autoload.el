@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads nil "init-better-defaults" "init-better-defaults.el"
-;;;;;;  (23088 50719 0 0))
+;;;;;;  (23088 52966 0 0))
 ;;; Generated autoloads from init-better-defaults.el
 
 (autoload 'test-autoload-via-magic "init-better-defaults" "\
