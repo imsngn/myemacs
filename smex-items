@@ -1,9 +1,9 @@
 
 ;; ----- smex-history -----
 (
+ byte-compile-file
  counsel-git
  counsel-git-grep
- org-mode-restart
  info
  find-function-on-key
  find-variable
@@ -23,4 +23,5 @@
  (org-mode-restart . 1)
  (counsel-git . 2)
  (counsel-git-grep . 1)
+ (byte-compile-file . 8)
 )
