@@ -156,5 +156,11 @@
 					try-expand-line
 					try-complete-lisp-symbol-partially
 					try-complete-lisp-symbol))
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+(put 'dired-find-alternate-file 'disabled nil)
+
+(require 'dired-x)
+(setq dired-dwim-target t)
 
 (provide 'init-better-defaults)

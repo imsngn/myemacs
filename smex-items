@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- indent-region-or-buffer
- indent-buffer
- js2-mode
  byte-recompile-directory
+ js2-mode
  byte-compile-file
  byte-recompile-file
  counsel-git
+ find-variable
+ customize-group
 )
 
 ;; ----- smex-data -----
@@ -25,7 +25,7 @@
  (counsel-git-grep . 1)
  (byte-compile-file . 9)
  (byte-recompile-file . 2)
- (byte-recompile-directory . 4)
+ (byte-recompile-directory . 6)
  (indent-buffer . 1)
  (indent-region-or-buffer . 1)
 )

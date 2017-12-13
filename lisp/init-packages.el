@@ -3,7 +3,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (when (>= emacs-major-version 24)
-    (add-to-list 'package-archives '("melpa-cn" . "https://elpa.emacs-china.org/melpa/") t)
+    (add-to-list 'package-archives '("melpa-cn" . "http://elpa.emacs-china.org/melpa/") t)
   )
 (require 'cl)
 
@@ -20,6 +20,7 @@
                            nodejs-repl
                            exec-path-from-shell
                            popwin
+                           reveal-in-osx-finder
                            ) "Default packages")
 (setq package-selected-packages eyoumxu/packages)
 

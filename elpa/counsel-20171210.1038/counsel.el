@@ -1921,6 +1921,7 @@ string - the full shell command to run."
           (counsel-unquote-regex-parens
            (ivy--regex input))))
 
+
 (defun counsel-locate-cmd-noregex (input)
   "Return a shell command based on INPUT."
   (counsel-require-program "locate")

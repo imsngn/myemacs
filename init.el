@@ -20,11 +20,11 @@
 (defun open-my-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
-;;(require 'init-packages )
-;;(require 'init-ui)
-;;(require 'init-better-defaults)
-;;(require 'init-keybindings)
-;;(require 'init-org)
+(require 'init-packages )
+(require 'init-ui)
+(require 'init-better-defaults)
+(require 'init-keybindings)
+(require 'init-org)
 
 ;;(load "init-packages" )                 
 ;;(load "init-ui")
@@ -32,22 +32,22 @@
 ;;(load "init-keybindings")
 ;;(load "init-org")
 
-(load-file "~/.emacs.d/lisp/init-packages.elc")
-(load-file "~/.emacs.d/lisp/init-ui.elc")
+;;(load-file "~/.emacs.d/lisp/init-packages.elc")
+;;(load-file "~/.emacs.d/lisp/init-ui.elc")
 ;;(load-file "~/.emacs.d/lisp/init-better-defaults.elc")
-(load-file "~/.emacs.d/lisp/init-keybindings.elc")
-(load-file "~/.emacs.d/lisp/init-org.elc")
+;;(load-file "~/.emacs.d/lisp/init-keybindings.elc")
+;;(load-file "~/.emacs.d/lisp/init-org.elc")
 
-(autoload 'test-autoload "init-better-defaults")
+;;(autoload 'test-autoload "init-better-defaults")
 
-(test-autoload)
+;;(test-autoload)
 
 
-(update-file-autoloads "~/.emacs.d/lisp/init-better-defaults.el" t "~/.emacs.d/lisp/init-better-defaults-autoload.el")
+;;(update-file-autoloads "~/.emacs.d/lisp/init-better-defaults.el" t "~/.emacs.d/lisp/init-better-defaults-autoload.el")
 
-(load "init-better-defaults-autoload")
+;;(load "init-better-defaults-autoload")
 
-(test-autoload-via-magic)
+;;(test-autoload-via-magic)
 
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
