@@ -25,5 +25,5 @@
  (counsel-git-grep . 1)
  (byte-compile-file . 9)
  (byte-recompile-file . 2)
- (byte-recompile-directory . 3)
+ (byte-recompile-directory . 4)
 )

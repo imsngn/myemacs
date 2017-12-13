@@ -43,6 +43,13 @@
 (test-autoload)
 
 
+(update-file-autoloads "~/.emacs.d/lisp/init-better-defaults.el" t "~/.emacs.d/lisp/init-better-defaults-autoload.el")
+
+(load "init-better-defaults-autoload")
+
+(test-autoload-via-magic)
+
+
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
 

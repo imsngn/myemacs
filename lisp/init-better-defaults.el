@@ -101,6 +101,11 @@
 (defun test-autoload ()
   (interactive)
   (message "test autoload"))
+
+;;;###autoload
+(defun test-autoload-via-magic ()
+  (interactive)
+  (message "test autoload via magic comment ;;;###"))
 (mapcar
  (function (lambda (setting)
 	     (setq auto-mode-alist
@@ -123,3 +128,14 @@
    ("\\.js\\'" . js2-mode)
    ))
 (provide 'init-better-defaults)
+
+;;;### (autoloads nil "init-better-defaults" "init-better-defaults.el"
+;;;;;;  (23088 50558 0 0))
+;;; Generated autoloads from init-better-defaults.el
+
+(autoload 'test-autoload-via-magic "init-better-defaults" "\
+
+
+\(fn)" t nil)
+
+;;;***
