@@ -92,7 +92,15 @@
 (setq recentf-max-menu-items 25)
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
+
+
 (delete-selection-mode t)
+
+
+(defun test-autoload ()
+  (interactive)
+  (message "test autoload"))
 (mapcar
  (function (lambda (setting)
 	     (setq auto-mode-alist

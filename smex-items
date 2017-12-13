@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ byte-recompile-directory
  byte-compile-file
+ byte-recompile-file
  counsel-git
  counsel-git-grep
  info
  find-function-on-key
- find-variable
- find-function
 )
 
 ;; ----- smex-data -----
@@ -23,5 +23,7 @@
  (org-mode-restart . 1)
  (counsel-git . 2)
  (counsel-git-grep . 1)
- (byte-compile-file . 8)
+ (byte-compile-file . 9)
+ (byte-recompile-file . 2)
+ (byte-recompile-directory . 3)
 )

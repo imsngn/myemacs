@@ -12,7 +12,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;;(add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;- save your configure
 ;- define a function to quickly open your config file
@@ -34,10 +34,13 @@
 
 (load-file "~/.emacs.d/lisp/init-packages.elc")
 (load-file "~/.emacs.d/lisp/init-ui.elc")
-(load-file "~/.emacs.d/lisp/init-better-defaults.elc")
+;;(load-file "~/.emacs.d/lisp/init-better-defaults.elc")
 (load-file "~/.emacs.d/lisp/init-keybindings.elc")
 (load-file "~/.emacs.d/lisp/init-org.elc")
 
+(autoload 'test-autoload "init-better-defaults")
+
+(test-autoload)
 
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
