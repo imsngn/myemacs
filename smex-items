@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
+ iedit-mode
  customize-group
  replace-string
  byte-recompile-directory
  kill-some-buffers
  kill-buffer
  isearch-forward-regexp
- make-frame-command
 )
 
 ;; ----- smex-data -----
 (
  (cd . 1)
- (customize-group . 4)
+ (customize-group . 7)
  (js2-mode . 2)
  (nodejs-repl . 2)
  (find-function . 2)
@@ -34,4 +34,5 @@
  (kill-buffer . 1)
  (kill-some-buffers . 1)
  (replace-string . 8)
+ (iedit-mode . 6)
 )

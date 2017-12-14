@@ -24,6 +24,7 @@
                            web-mode
                            js2-refactor
                            expand-region
+                           iedit
                            ) "Default packages")
 (setq package-selected-packages eyoumxu/packages)
 
@@ -147,5 +148,5 @@
 (popwin-mode t)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
-
+;;(global-set-key (kbd "M-s e") 'iedit-mode)
 (provide  'init-packages)
