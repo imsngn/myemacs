@@ -22,6 +22,7 @@
                            popwin
                            reveal-in-osx-finder
                            web-mode
+                           js2-refactor
                            ) "Default packages")
 (setq package-selected-packages eyoumxu/packages)
 
@@ -82,7 +83,7 @@
 
 (global-company-mode t)
 
-
+;;basic indentation for web-mode
 (defun my-web-mode-indent-setup ()
   (setq web-mode-markup-indent-offset 2) ; web-mode, html tag in html file
   (setq web-mode-css-indent-offset 2)    ; web-mode, css in html file
@@ -90,6 +91,7 @@
   )
 (add-hook 'web-mode-hook 'my-web-mode-indent-setup)
 
+;; switch identation length between 2 and 4
 (defun my-toggle-web-indent ()
   (interactive)
   ;; web development
@@ -109,7 +111,9 @@
 
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 
-
+;;add-hool for js2mode-hook
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
 (load-theme 'monokai t)
 
 (require 'popwin)
