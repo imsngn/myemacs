@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ byte-recompile-directory
  kill-some-buffers
  kill-buffer
  isearch-forward-regexp
  make-frame-command
  make-frame
  org-mode-restart
- byte-recompile-directory
 )
 
 ;; ----- smex-data -----
@@ -25,7 +25,7 @@
  (counsel-git-grep . 1)
  (byte-compile-file . 9)
  (byte-recompile-file . 2)
- (byte-recompile-directory . 6)
+ (byte-recompile-directory . 7)
  (indent-buffer . 1)
  (indent-region-or-buffer . 1)
  (make-frame . 1)
