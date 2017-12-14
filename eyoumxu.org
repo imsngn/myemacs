@@ -18,6 +18,7 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 (require 'init-packages )
+(require 'init-font-setting)
 (require 'init-ui)
 (require 'init-better-defaults)
 (require 'init-keybindings)

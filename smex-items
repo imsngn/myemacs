@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ kill-some-buffers
+ kill-buffer
+ isearch-forward-regexp
+ make-frame-command
+ make-frame
  org-mode-restart
  byte-recompile-directory
- js2-mode
- byte-compile-file
- byte-recompile-file
- counsel-git
- find-variable
 )
 
 ;; ----- smex-data -----
@@ -28,4 +28,9 @@
  (byte-recompile-directory . 6)
  (indent-buffer . 1)
  (indent-region-or-buffer . 1)
+ (make-frame . 1)
+ (make-frame-command . 1)
+ (isearch-forward-regexp . 2)
+ (kill-buffer . 1)
+ (kill-some-buffers . 1)
 )
