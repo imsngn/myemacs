@@ -23,6 +23,7 @@
                            reveal-in-osx-finder
                            web-mode
                            js2-refactor
+                           expand-region
                            ) "Default packages")
 (setq package-selected-packages eyoumxu/packages)
 
@@ -144,5 +145,7 @@
 
 (require 'popwin)
 (popwin-mode t)
+
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 (provide  'init-packages)
