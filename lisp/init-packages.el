@@ -42,6 +42,9 @@
 
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
+(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
+
+
 
 ;;let emacs could found the executable
 (when (memq window-system '(mac ns x))
