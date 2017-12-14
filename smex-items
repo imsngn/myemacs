@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ replace-string
  byte-recompile-directory
  kill-some-buffers
  kill-buffer
  isearch-forward-regexp
  make-frame-command
  make-frame
- org-mode-restart
 )
 
 ;; ----- smex-data -----
@@ -33,4 +33,5 @@
  (isearch-forward-regexp . 2)
  (kill-buffer . 1)
  (kill-some-buffers . 1)
+ (replace-string . 8)
 )
